@@ -1,0 +1,4 @@
+cron:
+- description: Schduled Backup
+  url: /auto_backup
+  schedule: every day 19:00
