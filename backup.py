@@ -4,7 +4,7 @@ import webapp2
 from google.appengine.ext.db.metadata import Kind
 from google.appengine.api import taskqueue
 
-class BackupAllKinds(webapp2.RequestHandler:
+class BackupAllKinds(webapp2.RequestHandler):
     def get(self):
 
         # make list of all Kinds
@@ -31,6 +31,6 @@ class BackupAllKinds(webapp2.RequestHandler:
         self.response.out.write("end")
 
 app = webapp2.WSGIApplication([
-     ('/backup', BackupAllKinds)
+     ('/auto_backup', BackupAllKinds)
      ],
      debug=True)
